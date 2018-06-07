@@ -1,0 +1,339 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+ul
+	margin: 0
+	li
+		display: inline-block
+
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader-inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+a
+	text-decoration: none
+	color: #000
+	&:hover, &:focus
+		cursor: pointer
+		outline: none
+		text-decoration: none
+		transition: all 1s ease 
+h1, h2, h3, h4
+	margin: 0
+.accent
+	color: $accent
+.hide
+	display: none
+button
+	&:hover, &:focus
+		cursor: pointer
+		outline: none
+		text-decoration: none
+//display in row
+.row		
+	> div
+		display: inline-block
+
+//custom grid
+.cont
+	max-widths: 100%
+	margin: 0 15%
+	.col-1
+		width: 8%
+	.col-2
+		width: 16%
+	.col-3
+		width: 24%
+	.col-4
+		width: 33%
+	.col-5
+		width: 40%
+	.col-6
+		width: 48%
+	.col-7
+		width: 56%
+	.col-8
+		width: 65%
+	.col-9
+		width: 72%
+	.col-10
+		width: 80%
+	.col-11
+		width: 88%
+	.col-12
+		width: 96%
+	.col-offset-2
+		margin-left: 16%
+	.col-offset-1
+		margin-left: 8%
+	.col-offset-3
+		margin-left: 24%
+
+//grid without margin
+.cont-fluid
+	max-widths: 100%
+	margin: 0 3%
+
+//button for hamburger menu appears at max-width: 768
+.navButton-open
+	position: absolute
+	right: -1000px
+	transition: all 1s ease
+	&::before, &::after
+		transition: all 1s ease
+		content: ""
+		position: absolute
+		width: 50px
+		height: 2px
+		right: 1010px
+		background-color: $accent
+		top: 10px
+		transform: rotate(360deg)
+	&::after
+		top: 20px
+
+//navigation
+.top-line
+	padding-top: 10px
+	.logo
+		width: 25%
+	.menu
+		float: right
+		text-transform: uppercase
+		margin-top: 8px			
+		.b-wrapper
+			height: 100%
+		.navButton
+			display: none
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				margin-left: 30px	
+				position: relative
+				a
+					font-size: 18px
+					font-weight: 200
+					color: rgb(29,29,27)
+					padding-bottom: 5px
+					&:hover
+						transition: all 1s ease
+						color: $accent
+				.active
+					color: $accent
+					&::after
+						content: ""
+						position: absolute
+						height: 1px
+						width: 100%
+						left: 2px
+						top: 100%
+						background-color: $accent		
+
+//owl-carousel slider
+.slider
+	position: relative
+	height: auto
+	.item
+		width: 100%
+		position: relative
+		.cont
+			position: absolute
+			top: 85px
+			h1
+				margin: 0
+				font-size: 48px
+				color: rgb(0,0,0)
+				font-weight: 300	
+				text-shadow: 1.286px 1.532px 3px rgba(0,0,0,0.75)
+			p
+				font-weight: 200
+				font-size: 20px
+				line-height: 24px
+				color: rgb(38,38,38)
+			.button
+				position: absolute
+				padding: 10px 70px
+				border-radius: 100px
+				border: 1px solid $accent
+				color: $accent
+				background-color: #fff
+				right: 0
+				top: 275px
+				font-size: 16px
+				&:hover
+					box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75)
+					transition: all 1s ease
+					color: #fff
+					background-color: $accent
+	.owl-prev, .owl-next
+		position: absolute
+		top: 45%
+	.owl-next
+		right: 8%
+	.owl-prev
+		left: 8%
+
+//quick-news bottom
+.quick-news
+	padding: 22px 0
+	margin-left: 40px
+	.cont
+	.link1
+		white-space: nowrap
+		color: #7d7d7d
+		font-size: 11px
+	.text
+		padding-left: 1%
+		white-space: nowrap
+		font-size: 15px
+		font-weight: 200
+		.dots
+			display: none
+	.link2
+		padding-left: 5%
+		a
+			color: $accent
+			&:hover
+				color: darken($accent, 18%)
+//main content
+#content
+	background-color: #f2f2f2
+	padding: 20px 0
+.article
+	p
+		line-height: 24px
+		margin-top: 10px
+	.tittle
+		h2
+			font-weight: 300
+			font-size: 48px
+	&-image
+		margin-top: 10px
+		.img-text
+			position: relative
+			top: -10px
+			p
+				margin: 0 0 12px 11px
+	&-text
+		.tooltip
+			display: inline
+			position: relative
+			border-bottom: 1px dotted $accent
+			.tooltip-text
+				visibility: hidden
+				width: 100%
+				position: absolute
+				text-align: center
+				padding: 2px 0
+				border-radius: 6px
+				z-index: 1
+				color: #fff
+				background-color: #000
+				bottom: 110%
+				left: 0
+				&::after
+					content: ""
+					position: absolute
+					top: 100%
+					left: 50%
+					margin-left: -5px
+					border-width: 5px
+					border-style: solid
+					border-color: #000 transparent transparent
+			&:hover
+				.tooltip-text
+					visibility: visible
+
+//queue graphic
+.grafic
+	.cont
+		padding: 10px 0 0 50px
+		.h2
+			font-weight: 300
+			margin-left: 17%
+		.col-10
+			margin-top: 8px
+			.col-1
+				position: relative
+				top: -60px
+				right: -25px
+
+//article Vice o Kave
+.article-bottom
+	padding-top: 30px	
+	.h3
+		font-weight: 300
+		font-size: 36px
+	.col-5	
+		position: relative
+		top: -30px	
+	.col-6
+		.dotsA
+			display: none
+		.vice
+			display: none
+#footer
+	padding: 20px 0
+	.copyright
+		margin-bottom: 2px
+		font-size: 14px
+		font-weight: bold
+		text-transform: uppercase
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+.text-center
+	text-align: center
+
+
+@import "media" // Always at the end

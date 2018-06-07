@@ -1,0 +1,392 @@
+@import "vars"
+
+//media quiries
+
+@media only screen and (max-width: 320px)
+	/**/
+@media screen and (max-width: 480px)
+	.top-line
+		.cont-fluid
+			position: relative
+			.menu
+				a
+					.navButton
+						top: 10px
+						&::before, &::after
+							top: -6px
+							transition: all 1s ease
+						&::after
+							top: 6px
+				.toggle-menu
+					right: 80px
+					width: 270%
+					z-index: 100
+					li
+						a
+							&:hover
+								color: $accent
+				.navButton-open
+					right: -20px
+					transition: all 1s ease
+					top: -5px
+					&::before, &::after
+						transition: all 1s ease
+						content: ""
+						position: absolute
+						width: 50px
+						height: 2px
+						right: 30px
+						background-color: $accent
+						top: 10px
+						transform: rotate(360deg)
+					&::after
+						top: 20px
+	body			
+		#header
+			.top-panel
+				.slider
+					.item
+						.cont 
+							top: 25px
+							h1
+								font-size: 15px
+								line-height: 16px
+							p
+								font-size: 8px
+								line-height: 10px
+							.button
+								top: 40px
+								padding: 4px 10px
+								font-size: 9px
+							.hidden
+								display: none
+					.owl-prev, .owl-next
+						top: 50px
+						width: 5px
+				.owl-carousel 
+					.owl-stage-outer
+						width: 100%				
+		#content	
+			.article
+				.cont
+					p
+						line-height: 10px
+						margin-top: 8px
+						font-size: 9px
+					.tittle
+						h2
+							font-size: 24px
+					.col-4
+						width: 100%
+						height: auto
+					.col-8
+						display: none
+				&-image
+					margin-top: 0
+					.img-text
+						top: 10px		
+				&-text
+					padding-bottom: 20px
+		#header
+			.top-panel	
+				.quick-news
+					text-align: left
+					height: auto
+					.cont
+						.col-offset-1
+							margin-left: 0
+						.text
+							padding-left: 4%
+							font-size: 7px
+							.hidden
+								display: none
+							.dots
+								display: inline
+						.link2
+							font-size: 8px
+							margin-left: 2px
+							text-align: right
+						.link1
+							font-size: 6px
+						.col-8
+							width: 45%
+							margin-left: 20px
+						.col-2
+							width: 20%
+							margin-left: 2px						
+		#content
+			.grafic
+				.cont
+					padding: 0
+					.col-offset-1
+						margin-left: 0
+					.h2
+						font-size: 15px
+					.col-10
+						width: 100%
+						.row
+							.col-1
+								display: none
+	#footer
+		font-size: 14px
+		.copyright
+			font-size: 12px
+			font-weight: bold
+@media screen and (max-width: 768px)
+	.top-line
+		.cont-fluid
+			.logo
+				width: 30%
+		.menu
+			width: 10%
+			height: 40px
+			position: relative
+			.toggle-menu
+				position: absolute
+				right: 130%
+				top: 40px
+				width: 200%
+				transition: all 1s ease
+				z-index: 100
+				li
+					width: 160%
+					text-align: center
+					position: relative
+					a
+						padding: 5px 10px
+						display: block
+						color: #000
+						&::before
+							position: absolute
+							content: ""
+							background-color: gray
+							top: 0
+							bottom: 0
+							left: 0
+							right: 0
+							opacity: .4
+					.active
+						&::after
+							height: 0
+							width: 0
+			.navIcon
+				.navButton
+					position: absolute
+					display: block
+					top: 40%
+					height: 2px
+					width: 86%
+					background-color: $accent
+					transition: all 1s ease
+					&::before, &::after
+						content: ""
+						position: absolute
+						width: 100%
+						height: 2px
+						background-color: $accent
+						top: -10px
+						transition: all 1s ease
+					&::after
+						top: 10px
+	.cont-fluid
+		.row
+			.hidden-sm
+				display: none
+	#header
+		.top-panel
+			.slider
+				.item
+					.cont 
+						top: 30px
+						h1
+							font-size: 22px
+							line-height: 30px
+						p
+							font-size: 12px
+							line-height: 16px
+						.button
+							top: 98px
+							padding: 6px 25px
+							font-size: 11px
+						.hidden
+							display: none
+				.owl-prev, .owl-next
+					top: 80px
+					width: 10px
+	#header
+		.top-panel	
+			.quick-news
+				padding: 0 0
+				text-align: center
+				.text
+					padding-left: 7%
+				.col-8
+					width: 50%
+					margin-left: 20px
+					.hidden
+						display: none
+					.dots
+						display: inline
+				.col-2
+					width: 20%
+	#content	
+		.article
+			.cont
+				p
+					line-height: 12px
+					margin-top: 8px
+					font-size: 11px
+				.col-4
+					width: 38%
+					height: 115px
+				.col-8
+					width: 54%
+					top: 0
+					.hidden
+						display: none	
+		.grafic
+			.cont
+				padding: 0 0 0 20px
+				.h2
+					font-size: 20px
+				.col-10
+					.col-1
+						top: -80px
+						right: -10px	
+		.article-bottom
+			padding-top: 30px	
+			font-size: 12px
+			.cont
+				.h3
+					font-size: 24px
+				.hidden-art
+					display: none
+				.row
+					.col-6
+						.dotsA
+							display: inline
+							color: blue
+				
+@media screen and (max-width: 992px)
+	.top-line
+		.logo
+			width: 15%
+		.menu
+			margin-top: 5px
+			ul
+				li
+					margin-left: 10px
+					a
+						font-size: 14px
+	.top-panel
+		.slider
+			.item
+				.cont 
+					top: 50px
+					h1
+						font-size: 35px
+					p
+						font-size: 13px
+						line-height: 16px
+					.button
+						top: 170px
+						padding: 6px	40px
+			.owl-prev, .owl-next
+					top: 130px
+					width: 20px
+	#header
+		.top-panel	
+			.quick-news
+				padding: 10px 0
+				.cont
+					.link1
+						font-size: 8px
+					.text
+						font-size: 9px
+						padding-left: 2%
+					.link2
+						margin-left: 0
+						font-size: 9px	
+	#content	
+		.article
+			p
+				line-height: 14px
+				margin-top: 8px
+				font-size: 12px
+			.tittle
+				h2
+					font-size: 30px
+			&-image
+				margin-top: 0
+				.img-text
+					top: 10px
+	.grafic
+		.cont
+			.col-10
+				.col-1
+					top: -65px
+					right: -15px
+	.article-bottom
+		padding-top: 30px	
+		.cont
+			.row
+				> div
+					display: block
+			.col-6
+				width: 100%
+			.col-5
+				width: 100%
+				position: relative
+				top: 0
+@media screen and (max-width: 1200px)
+	.top-line
+		.menu
+			ul
+				li
+					a
+						font-size: 15px
+	.slider 
+		.item 
+			.cont 
+				top: 70px
+				h1
+					font-size: 40px
+				p
+					font-size: 16px
+					line-height: 18px
+				.button
+					top: 210px
+					padding: 10px 60px
+	.top-panel
+		.quick-news
+			padding: 30px 0
+			.link1
+				font-size: 10px
+			.text
+				font-size: 12px
+			.link2
+				font-size: 12px
+	.article
+		p
+			line-height: 18px
+			margin-top: 8px
+			font-size: 15px
+		.tittle
+			h2
+				font-size: 44px
+		&-image
+			margin-top: 0
+			.img-text
+				top: 10px
+
+// MIN-WIDTH
+@media screen and (min-width: 320px)
+	// 320
+@media screen and (min-width: 480px)
+	// 480
+@media screen and (min-width: 768px)
+	// 768
+@media screen and (min-width: 992px)
+	// 992
+@media screen and (min-width: 1200px)
+	// 1200

@@ -1,2 +1,1 @@
 # etnetera
-Landing page
